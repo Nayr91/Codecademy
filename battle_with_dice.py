@@ -65,7 +65,6 @@ class Rogue(Character):
         return 0
       print("You use SNEAK ATTACK")
       output = random.choice(d12dice) * 5 + 8
-      self.charges -= 1
       return output
 
 class Mage(Character):
@@ -80,7 +79,6 @@ class Mage(Character):
       print("You use FIREBALL")
       time.sleep(1)
       output = random.choice(d8dice) * 8 + 6
-      self.charges -= 1
       return output
 
 
