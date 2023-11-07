@@ -1,5 +1,6 @@
 import random
 import time
+import datetime
 
 #Declaring different dice
 d20dice = range(1, 20)
@@ -8,6 +9,7 @@ d10dice = range(1, 10)
 d8dice = range(1, 8)
 d6dice = range(1, 6)
 
+now = datetime.datetime.now()
 
 # Declare classes
 class Character:
@@ -39,6 +41,8 @@ class Character:
     def gold_value(self):
       value = random.randint(40, self.goldvalue)
       value = value * 3
+      with open("Gold.txt", "a") as winnings:
+        winnings.write(f"{now}: The player won {value} from defeating {self.name}")
       return value
 
 class Warrior(Character):
@@ -48,9 +52,9 @@ class Warrior(Character):
       self.charges = 2
       
     def special_attack(self):
-      if self.charges <= 0:
-        return 0
+      time.sleep(1)
       print("You use RECKLESS STRIKES")
+      time.sleep(1)
       output = random.choice(d20dice) * 3 + 10
       return output
 
@@ -61,9 +65,9 @@ class Rogue(Character):
       self.charges = 3
       
     def special_attack(self):
-      if self.charges <= 0:
-        return 0
+      time.sleep(1)
       print("You use SNEAK ATTACK")
+      time.sleep(1)
       output = random.choice(d12dice) * 5 + 8
       return output
 
@@ -74,8 +78,7 @@ class Mage(Character):
       self.charges = 4
       
     def special_attack(self):
-      if self.charges <= 0:
-        return 0
+      time.sleep(1)
       print("You use FIREBALL")
       time.sleep(1)
       output = random.choice(d8dice) * 8 + 6
@@ -145,7 +148,6 @@ def start():
 
 
 def player_turn(player, opponent):
-  print(player, opponent)
   if player.health >= 1:
     print(f"It's your go {player.name}!")
     time.sleep(1)
@@ -155,6 +157,7 @@ def player_turn(player, opponent):
       style = int(input("Type 1 for normal attack, or 2 for Special attack\n"))
       if style == 2:
         player.charges -= 1
+        time.sleep(1)
         print(f"You have {player.charges} charges remaining of your special attack")
         attackroll = player.atk_roll()
         print(f"You rolled {attackroll} to strike again {opponent.name} armour class of {opponent.armcla}!")
@@ -201,7 +204,7 @@ def baddie_turn(player, opponent):
     print("Prepare yourself!")
     time.sleep(1)
     attackroll = opponent.atk_roll()
-    print(f"{opponent.name} rolled {attackroll} to strike against {player.name}armour class of {player.armcla}!")
+    print(f"{opponent.name} rolled {attackroll} to strike against {player.name} armour class of {player.armcla}!")
     time.sleep(2)
     if attackroll >= player.armcla:
       damagedealt = opponent.deal_damage()
