@@ -20,6 +20,12 @@ class Tree:
         self.rating = rating
         print(f"Adding {genre}, {release} and {rating} to {self.data}")
     
+    def find_child(self, pick):
+        for i in self.children:
+            if i.data == pick:
+                return i
 
+        return False
 
-
+    def all_data(self):
+       print(f"{self.data} was released in {self.release} and we score it {self.rating}.")

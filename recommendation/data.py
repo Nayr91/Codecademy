@@ -1,6 +1,5 @@
 from tree import Tree
 
-genres = ["FPS", "RPG", "Platformer"]
 
 fps_games = [["Call of Duty: Modern Warefare 3", "FPS", 2023, "7/10"], ["Halo", "FPS", 2001, "8/10"], ["Fortnite", "FPS", 2017, "6/10"], ["Apex Legends", "FPS", 2019, "7/10"], ["Counter-Strike: 2", "FPS", "2023", "5/10"]]
 rpg_games = [["World of Warcraft", "RPG", 2004, "8/10"], ["The Witcher 3: The Wild Hunt", "RPG", 2015, "9/10"], ["Elder Scrolls: Skyrim", "RPG", 2011, "10/10" ], ["Elden Ring", "RPG", 2022, "7/10"], ["Fallout 4", "RPG", 2015, "8/10"]]
@@ -88,3 +87,7 @@ surv.add_child(surv1), surv.add_child(surv2), surv.add_child(surv3), surv.add_ch
 sim.add_child(sim1), sim.add_child(sim2), sim.add_child(sim), sim.add_child(sim4), sim.add_child(sim5)
 race.add_child(race1), race.add_child(race2), race.add_child(race3), race.add_child(race4), race.add_child(race5)
 rts.add_child(rts1), rts.add_child(rts2), rts.add_child(rts3), rts.add_child(rts4), rts.add_child(rts5)
+
+master_tree = Tree("Master")
+master_tree.add_child(fps), master_tree.add_child(rpg), master_tree.add_child(plat), master_tree.add_child(fight)
+master_tree.add_child(surv), master_tree.add_child(sim), master_tree.add_child(race), master_tree.add_child(rts)
