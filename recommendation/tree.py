@@ -24,7 +24,6 @@ class Tree:
         for i in self.children:
             if i.data == pick:
                 return i
-
         return False
 
     def all_data(self):

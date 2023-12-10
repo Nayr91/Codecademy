@@ -1,10 +1,6 @@
 from tree import Tree
 from data import *
-
-
-            
-
-    
+ 
 def welcome():
     print("""
           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -40,8 +36,7 @@ def welcome():
     more_data = int(input("Which game would you like to more about?\n"))
     genre_tree.children[more_data - 1].all_data()
     
-
-    
+   
 def input_request():
     x = input("Which Genre are you interested in? \n")
     return x

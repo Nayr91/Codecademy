@@ -1,6 +1,5 @@
 from tree import Tree
 
-
 fps_games = [["Call of Duty: Modern Warefare 3", "FPS", 2023, "7/10"], ["Halo", "FPS", 2001, "8/10"], ["Fortnite", "FPS", 2017, "6/10"], ["Apex Legends", "FPS", 2019, "7/10"], ["Counter-Strike: 2", "FPS", "2023", "5/10"]]
 rpg_games = [["World of Warcraft", "RPG", 2004, "8/10"], ["The Witcher 3: The Wild Hunt", "RPG", 2015, "9/10"], ["Elder Scrolls: Skyrim", "RPG", 2011, "10/10" ], ["Elden Ring", "RPG", 2022, "7/10"], ["Fallout 4", "RPG", 2015, "8/10"]]
 plat_games = [["Shovel Knight", "Platformer", 2014, "4/10"],["Rayman Legends", "Platformer", 2011, "7/10"],["Super Marios 64", "Platformer", 1996, "9/10"],["Donkey Kong Country", "Platformer", 1994, "10/10"],["Cuphead", "Platformer", 2017, "7/10"]]
