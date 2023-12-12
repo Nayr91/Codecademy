@@ -12,3 +12,7 @@ SW	            Rt, offset(Rs)	    MEM[Rs + offset] <- Rt
 CACHE	        Code	            Code = 0(Cache off) Code = 1(Cache on), Code = 2(Flush cache)
 HALT	        ;	                Terminate Execution
 """
+
+https://www.dsi.unive.it/~gasparetto/materials/MIPS_Instruction_Set.pdf
+
+https://www.codecademy.com/journeys/computer-science/paths/cscj-22-computer-architecture/tracks/cscj-22-computer-architecture/modules/cscj-22-cpu-cache-memory/lessons/cache/exercises/summary
