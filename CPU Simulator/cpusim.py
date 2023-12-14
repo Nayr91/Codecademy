@@ -130,24 +130,9 @@ class CPU:
             print(f"{x} has been added to memory storage address: {y}")
             self.memory_storage.to_add(x, y)
         elif outp == 5:
-            print(f"{self.memory_storage.memory_store[y]} is stored at memory register: {y}")
+            print(f"{self.memory_storage.memory_store[int(y)]} is stored at memory register: {y}")
         elif outp == 6:
             self.saved_link = self.memory_storage.memory_store[y]
-        elif outp == 8:
-            if z == None:
-                print("Unable to process")
-                return
-            if y > 3:
-                print("Unable to process, number outside of cache registery")
-                return
-            if z> 32:
-                print("Unable to process, number outside of memory registery")
-                return
-            if self.cache[z] == None:
-                print("No value to load to memory")
-                return
-            self.store_in_memory(y, self.cache[z])
-            print(f"Adding {self.cache[z]} at memory register: {y} ")
         elif outp == 7:
             if z == None:
                 print("Unable to process")
@@ -159,15 +144,66 @@ class CPU:
                 print("Unable to process, number outside of cache registery")
                 return
             self.store_in_cache(z, self.memory_storage.memory_store[y])
+            print(f"Adding {self.memory_storage.memory_store[y]} at memory register: {z} ")
+        elif outp == 8:
+            if z == None:
+                print("Unable to process")
+                return
+            if y > 3:
+                print("Unable to process, number outside of cache registery")
+                return
+            if z> 32:
+                print("Unable to process, number outside of memory registery")
+                return
+            if self.cache[y] == None:
+                print("No value to load to memory")
+                return
+            self.store_in_memory(y, self.cache[z])
+            print(f"Adding {self.cache[z]} at memory register: {y} ")
+        elif outp == 9:
+            if x != 2:
+                print("Unable to process")
+            else:
+                print("Flushing cache")
+                self.cache = {0 : None,
+                    1 : None,
+                    2 : None,
+                    3 : None}
+        elif outp == 10:
+            print("Termination Executed")
+            exit()
+        else:
+            print("Unable to process")
+            return
 
-test = CPU()
-for i in range(len(test.memory_storage.memory_store)):
-    test.memory_storage.memory_store[i] = random.randint(0, 20)
-    
-test.take_instr("LW 3(2)")
-test.take_instr("SW 3(2)")
-test.take_instr("SW 3(2)")
-test.take_instr("SW 3(2)")
-print(test.memory_storage.memory_store)
-print(test.cache)
-            
+def welcome():
+    print("""
+          Welcome to my Basic MIPS instruction reader.\n
+        """)  
+    x = input("Press enter to initialise...\n")  
+    cpusim = CPU()
+    for i in range(len(cpusim.memory_storage.memory_store)):
+        cpusim.memory_storage.memory_store[i] = random.randint(0, 20)
+    for j in range(len(cpusim.cache)):
+        cpusim.cache[j] = random.randint(0,20)
+    print("""
+          Please see below instructions and enter accordingly:
+            Instruction	    Operand	            Meaning
+            ADD	            Rd, Rs, Rt	        Rd <- Rs + Rt;
+            ADDI	        Rt, Rs, immd	    Rt <- Rs + immd
+            SUB	            Rd, Rs, Rt	        Rd <- Rs - Rt
+            SLT	            Rd, Rs, Rt	        If (Rs < Rt) then Rd <- 1 else Rd <- 0
+            BNE	            Rs, Rt, offset	    If (Rs not equal Rt) then PC <- (PC + 4) + offset * 4
+            J	            target	            PC <- target * 4
+            JAL	            target	            R7 <- PC + 4; PC <- target *4
+            LW	            Rt, offset(Rs)	    Rt <- MEM[Rs + offset]
+            SW	            Rt, offset(Rs)	    MEM[Rs + offset] <- Rt
+            CACHE	        Code	            Code = 2(Flush cache)
+            HALT	        ;	                Terminate Execution
+          """)
+    oper = input("Enter command... \n").upper()
+    cpusim.take_instr(oper)
+
+
+if __name__ == "__main__":
+    welcome()         
