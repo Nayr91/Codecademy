@@ -1,0 +1,32 @@
+year,champions,relegated_1,relegated_2,relegated_3,top_scorer_1,top_scorer_2,top_scorer_3,top_scorer_team_1,top_scorer_team_2,top_scorer_team_3,goals_scored
+1993,Manchester United,Crystal Palace,Middlesbrough,Nottingham Forest,Teddy Sheringham,,,Tottenham Hotspur,,,22
+1994,Manchester United,Sheffield United,Oldham Athletic,Swindon Town,Andy Cole,,,Newcastle United,,,34
+1995,Blackburn Rovers,Crystal Palace,Norwich City,Leicester City,Alan Shearer,,,Blackburn Rovers,,,34
+1996,Manchester United,Manchester City,Queens Park Rangers,Bolton Wanderers,Alan Shearer,,,Blackburn Rovers,,,31
+1997,Manchester United,Sunderland,Middlesbrough,Nottingham Forest,Alan Shearer,,,Newcastle United,,,25
+1998,Arsenal,Bolton Wanderers,Barnsley,Crystal Palace,Dion Dublin,Michael Owen,Chris Sutton,Coventry City, Liverpool, Blackburn Rovers,18
+1999,Manchester United,Charlton Athletic,Blackburn Rovers,Nottingham Forest,Jimmy Floyd Hasselbaink,Michael Owen,Dwight Yorke,Leeds United, Liverpool, Manchester United,18
+['2000'],Manchester United,Wimbledon,Sheffield Wednesday,Watford,Kevin Phillips,,,Sunderland AFC,,,30
+2001,Manchester United,Manchester City,Coventry City,Bradford City,Jimmy Floyd Hasselbaink,,,Chelsea,,,23
+2002,Arsenal,Ipswich Town,Derby County,Leicester City,Thierry Henry,,,Arsenal,,,24
+2003,Manchester United,West Ham United,West Bromwich Albion,Sunderland,Ruud van Nistelrooy,,,Manchester United,,,25
+2004,Arsenal,Leicester City,Leeds United,Wolverhampton Wanderers,Thierry Henry,,,Arsenal,,,30
+2005,Chelsea,Crystal Palace,Norwich City,Southampton,Thierry Henry,,,Arsenal,,,25
+2006,Chelsea,Birmingham City,West Bromwich Albion,Sunderland,Thierry Henry,,,Arsenal,,,27
+2007,Manchester United,Sheffield United,Charlton Athletic,Watford,Didier Drogba,,,Chelsea,,,20
+2008,Manchester United,Reading,Birmingham City,Derby County,Cristiano Ronaldo,,,Manchester United,,,31
+2009,Manchester United,Newcastle United,Middlesbrough,West Bromwich Albion,Nicolas Anelka,,,Chelsea,,,19
+2010,Chelsea,Burnley,Hull City,Portsmouth,Didier Drogba,,,Chelsea,,,29
+2011,Manchester United,Birmingham City,Blackpool,West Ham United,Dimitar Berbatov,Carlos Tevez,,Manchester United, Manchester City,,20
+2012,Manchester City,Bolton Wanderers,Blackburn Rovers,Wolverhampton Wanderers,Robin van Persie,,,Arsenal,,,30
+2013,Manchester United,Wigan Athletic,Reading,Queens Park Rangers,Robin van Persie,,,Manchester United,,,26
+2014,Manchester City,Norwich City,Fulham,Cardiff City,Luis Suarez,,,Liverpool,,,31
+2015,Chelsea,Hull City,Burnley,Queens Park Rangers,Sergio Aguero,,,Manchester City,,,26
+2016,Leicester City,Newcastle United,Norwich City,Aston Villa,Harry Kane,,,Tottenham Hotspur,,,25
+2017,Chelsea,Sunderland,Middlesbrough,Hull City,Harry Kane,,,Tottenham Hotspur,,,29
+2018,Manchester City,Swansea City,Stoke City,West Bromwich Albion,Mohamed Salah,,,Liverpool,,,32
+2019,Manchester City,Cardiff City,Fulham,Huddersfield Town,Pierre-Emerick Aubameyang,Sadio Mane,Mohamed Salah,Arsenal, Liverpool, Liverpool,22
+2020,Liverpool,Bournemouth,Watford,Norwich City,Jamie Vardy,,,Leicester City,,,23
+2021,Manchester City,Fulham,West Bromwich Albion,Sheffield United,Harry Kane,,,Tottenham Hotspur,,,23
+2022,Manchester City,Burnley,Watford,Norwich City,Mohamed Salah,Son Heung-min,,Liverpool, Tottenham Hotspur,,23
+2023,Manchester City,Leicester City,Leeds United,Southampton,Erling Haaland,,,Manchester City,,,36
